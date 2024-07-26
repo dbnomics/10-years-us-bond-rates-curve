@@ -129,11 +129,11 @@ if selected == "Sources":
     st.subheader("**Data**\n")
     st.write(
         "**United States**:\n"
-        "- [10 Years Bond Rate](https://db.nomics.world/FED/H15/RIFLGFCY10_N.B)\n"
+        "- [10 Years Bond Rates](https://db.nomics.world/FED/H15/RIFLGFCY10_N.B)\n"
         "\n"
         "**Germany**:\n"
-        "- [10 Years Bond Rate](https://db.nomics.world/BUBA/BBK01/WT1010)\n"
+        "- [10 Years Bond Rates](https://db.nomics.world/BUBA/BBK01/WT1010)\n"
         "\n"
         "**France**:\n"
-        "- [10 Years Bond Rate](https://db.nomics.world/BDF/FM/M.FR.EUR.FR2.BB.FR10YT_RR.YLD)\n"
+        "- [10 Years Bond Rates](https://db.nomics.world/BDF/FM/M.FR.EUR.FR2.BB.FR10YT_RR.YLD)\n"
     )
