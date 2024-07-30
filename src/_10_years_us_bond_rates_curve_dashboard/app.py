@@ -75,12 +75,6 @@ if selected == "United-States":
         custom_data=["original_period", "original_value"],
     )
 
-    st.write(
-        "Some **significant periods** in Global Economy are easily identifiable through this curve: \n"
-        "- The **1970s-80s** with the **highest recorded rates due to high volatility**. Rates were rising because of staglation and oil shocks. Restrictive monetary policies lead to a rate above 10%.In the 80s, Paul Volcker's significant fight against inflation in the US drives rates to 15%.\n"
-        "- Following **the 2008 crisis**, interest rates remained very low, **ranging between 2% and 3%**. The slow recovery and accommodative policies from the Federal Reserve contributed to this prolonged period of low rates.\n "
-        "- The historically **lowest rates after 2020**, rates plummet to record lows (0.5-1%) with **massive stimulus measures**.Then, rates rise (3-4%) in response to **re-emerging inflation between 2021 and 2023**.\n"
-    )
     trace_us.update_traces(
         hovertemplate="<br>".join(
             [
@@ -92,6 +86,12 @@ if selected == "United-States":
     )
 
     st.plotly_chart(trace_us)
+    st.write(
+        "Some **significant periods** in Global Economy are easily identifiable through this curve: \n"
+        "- The **1970s-80s** with the **highest recorded rates due to high volatility**. Rates were rising because of staglation and oil shocks. Restrictive monetary policies lead to a rate above 10%.In the 80s, Paul Volcker's significant fight against inflation in the US drives rates to 15%.\n"
+        "- Following **the 2008 crisis**, interest rates remained very low, **ranging between 2% and 3%**. The slow recovery and accommodative policies from the Federal Reserve contributed to this prolonged period of low rates.\n "
+        "- The historically **lowest rates after 2020**, rates plummet to record lows (0.5-1%) with **massive stimulus measures**.Then, rates rise (3-4%) in response to **re-emerging inflation between 2021 and 2023**.\n"
+    )
     st.subheader("Dataset")
     st.write(us_bond)
 
@@ -154,4 +154,10 @@ if selected == "Sources":
         "\n"
         "**France**:\n"
         "- [10 Years Bond Rates](https://db.nomics.world/BDF/FM/M.FR.EUR.FR2.BB.FR10YT_RR.YLD)\n"
+    )
+    st.markdown("---")
+    st.write(
+        "[DBnomics](https://db.nomics.world)\n"
+        "\n"
+        "[Source Code](https://github.com/dbnomics/10-years-us-bond-rates-curve-dashboard)\n"
     )
