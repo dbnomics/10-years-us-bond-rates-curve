@@ -48,10 +48,21 @@ with st.sidebar:
 
 
 if selected == "Explanations":
+    st.subheader("**Definitions**")
     st.write(
-        ""
+        "**10 years bonds** are a type of **loan granted to a government** by an investor.\n"
+        "In return, the bond issuer agrees to pay interest at regular intervals and to repay the principal borrowed at a future date, 10 years later.\n"
+        "\n"
+        "These 10-year bonds are a **key barometer of economic and financial health**. Their rate (known as yield) **fluctuates with monetary policies, inflation, and crises**.\n"
     )
-
+    st.markdown("---")
+    st.write(
+        "**The interest rate on bonds (or \"yield\") is the percentage return on investment that the investor receives**. This rate varies based on several factors, including:\n"
+        "- The duration of the bond.\n"
+        "- The credit quality of the issuer.\n"
+        "- Overall economic conditions.\n"
+        "- Central bank monetary policies.\n"
+    )
 if selected == "United-States":
     # Plot data for US
     us_bond = fetch_series("FED/H15/RIFLGFCY10_N.B")
@@ -60,8 +71,15 @@ if selected == "United-States":
         x="original_period",
         y="original_value",
         title="10 Years Yield Bond for United-States",
-        labels={"original_period": "Date", "original_value": "Bond rate"},
+        labels={"original_period": "Date", "original_value": "Bond rate (%)"},
         custom_data=["original_period", "original_value"],
+    )
+
+    st.write(
+        "Some **significant periods** in Global Economy are easily identifiable through this curve: \n"
+        "- The **1970s-80s** with the **highest recorded rates due to high volatility**. Rates were rising because of staglation and oil shocks. Restrictive monetary policies lead to a rate above 10%.In the 80s, Paul Volcker's significant fight against inflation in the US drives rates to 15%.\n"
+        "- Following **the 2008 crisis**, interest rates remained very low, **ranging between 2% and 3%**. The slow recovery and accommodative policies from the Federal Reserve contributed to this prolonged period of low rates.\n "
+        "- The historically **lowest rates after 2020**, rates plummet to record lows (0.5-1%) with **massive stimulus measures**.Then, rates rise (3-4%) in response to **re-emerging inflation between 2021 and 2023**.\n"
     )
     trace_us.update_traces(
         hovertemplate="<br>".join(
@@ -85,7 +103,7 @@ if selected == "Germany":
         x="original_period",
         y="original_value",
         title="10 Years Yield Bond for Germany",
-        labels={"original_period": "Date", "original_value": "Bond rate"},
+        labels={"original_period": "Date", "original_value": "Bond rate (%)"},
         custom_data=["original_period", "original_value"],
     )
     trace_ger.update_traces(
@@ -109,7 +127,7 @@ if selected == "France":
         x="original_period",
         y="original_value",
         title="10 Years Yield Bond for France",
-        labels={"original_period": "Date", "original_value": "Bond rate"},
+        labels={"original_period": "Date", "original_value": "Bond rate (%)"},
         custom_data=["original_period", "original_value"],
     )
     trace_fr.update_traces(
